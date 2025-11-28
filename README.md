@@ -9,19 +9,6 @@ I am solving these problems to strengthen my fundamentals in:
 All solutions are written with clean code, efficiency, and readability in mind.
 
 
-🗂️ Folder Structure
-
-cses_problemset/
-  ├── dynamic_programming/
-  ├── graph/
-  ├── sorting/
-  ├── mathematics/
-  ├── tree/
-  └── range_queries/
-
-Folder names may change as I continue solving more problems.
-
-
 🚀 Goals
 
 Solve all problems from the CSES Problem Set
