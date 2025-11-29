@@ -23,20 +23,29 @@ public class Message_Route {
     }
     public static void BFS(int n){
         boolean isWay=false;
+
         Queue<Integer> q=new LinkedList();
-        Set<Integer> set=new HashSet<>();
+        // Set<Integer> set=new HashSet<>();
+        boolean [] visited=new boolean[n+1];
+
         int [] parent=new int[n+1];
         Arrays.fill(parent,-1);
+
         q.add(1);
+        visited[1]=true;
+
         while(!q.isEmpty()){
             // remove
             int e=q.poll();
+
             // ignore
-            if(set.contains(e)){
-                continue;
-            }
+            // if(set.contains(e)){
+            //     continue;
+            // }
+
             // mark visited
-            set.add(e);
+            // set.add(e);
+            
             // self work
             if(e==n){
                 isWay=true;
@@ -44,7 +53,8 @@ public class Message_Route {
             }
             // add neighbours
             for(int key:map.get(e)){
-                if(!set.contains(key)){
+                if(!visited[key]){
+                    visited[key]=true;
                     parent[key]=e;
                     q.add(key);
                 }
@@ -55,12 +65,11 @@ public class Message_Route {
             return;
         }
         List<Integer> res=new ArrayList<>();
-        int idx=n;
-        while(parent[idx]!=-1){
-            res.add(idx);
-            idx=parent[idx];
+        int val=n;
+        while(val!=-1){
+            res.add(val);
+            val=parent[val];
         }
-        res.add(idx);
         System.out.println(res.size());
         for(int i=res.size()-1;i>=0;i--){
             System.out.print(res.get(i)+" ");
