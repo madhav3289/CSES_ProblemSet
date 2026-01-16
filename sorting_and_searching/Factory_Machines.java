@@ -18,7 +18,7 @@ public class Factory_Machines {
     public static long minTime(long [] nums,long t,int n){
         long ans=-1;
         long lo=1;
-        long hi=nums[n-1]*t;
+        long hi=nums[0]*t;
         while(lo<=hi){
             long mid=lo+(hi-lo)/2;
             if(isPossible(nums,mid,t)){
@@ -35,9 +35,7 @@ public class Factory_Machines {
         long count=0;
         for(int i=0;i<nums.length;i++){
             count+=mid/nums[i];
-            if(count>=t){
-                return true;
-            }
+            if(count>=t) return true;
         }
         return count>=t;
     }
