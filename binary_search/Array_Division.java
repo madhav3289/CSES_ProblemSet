@@ -1,4 +1,4 @@
-package cses_problemset.sorting_and_searching;
+package cses_problemset.binary_search;
 
 import java.util.*;
 
