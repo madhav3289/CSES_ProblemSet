@@ -35,7 +35,7 @@ public class Monsters {
         int [][] d={{-1,0},{1,0},{0,-1},{0,1}};
         char [] DIR={'U','D','L','R'};
 
-        Queue<int[]> qm=new LinkedList();
+        Queue<int[]> qm=new LinkedList<>();
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
                 if(maze[i][j]=='M'){
@@ -62,7 +62,7 @@ public class Monsters {
                 }
             }
         }
-        Queue<int[]> q=new LinkedList();
+        Queue<int[]> q=new LinkedList<>();
         boolean [][] visited=new boolean[n][m];
         q.add(new int[]{start[0],start[1]});
         visited[start[0]][start[1]]=true;

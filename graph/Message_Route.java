@@ -24,7 +24,7 @@ public class Message_Route {
     public static void BFS(int n){
         boolean isWay=false;
 
-        Queue<Integer> q=new LinkedList();
+        Queue<Integer> q=new LinkedList<>();
         // Set<Integer> set=new HashSet<>();
         boolean [] visited=new boolean[n+1];
 

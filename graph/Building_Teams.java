@@ -61,7 +61,7 @@ public class Building_Teams {
         int [] res=new int[n+1];
         Arrays.fill(res,-1);
         visited=new boolean[n+1];
-        Queue<int[]> queue=new LinkedList();
+        Queue<int[]> queue=new LinkedList<>();
         for(int i=1;i<=n;i++){
             if(visited[i]){
                 continue;
